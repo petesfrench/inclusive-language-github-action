@@ -1,6 +1,4 @@
 module.exports.languageList = [
-  'guys',
-  'retarded',
-  'dumb',
-  'crazy'
+  'whitelist',
+  'blacklist'
 ]
