@@ -16,6 +16,10 @@ Toolkit.run(async tools => {
   const owner = tools.context.payload.repository.owner.login;
   const repo = tools.context.payload.repository.name;
   const actor = tools.context.actor;
+  
+  console.log(owner)
+  console.log(repo)
+  console.log(actor)
 
   // Expends we are looking to act upon
   const expected_events = ['opened', 'edited', 'reopened']
@@ -38,7 +42,9 @@ Toolkit.run(async tools => {
   // Combine title and body and split into array of substrings
   let combined_string = `${title} ${body}`.toLowerCase();
   let combined_array = combined_string.split(" ");
-
+  
+  console.log(combined_array)
+  
   // Check if a word was found in the list
   let errorFound = false;
   for (let word of combined_array) {
